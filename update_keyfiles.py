@@ -38,5 +38,5 @@ except PermissionError:
     print('This script needs root permissions.')
     sys.exit(-1)
 
-# restart lighthttpd server
-os.system('service lighthttpd restart')
+# restart lighttpd server
+os.system('service lighttpd restart')
