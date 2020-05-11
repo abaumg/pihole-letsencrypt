@@ -8,5 +8,6 @@ You need a webserver in your LAN which serves the `*.pem` files you want to use 
 
 ### Setup:
 - SSH into your Pi-hole: `ssh root@pihole`
+- Install required Python3 libraries: `apt install python3-requests`
 - Clone this repository: `git clone https://github.com/abaumg/pihole-letsencrypt`
-- Edit crontab: `crontab -e` and add a new line containing `0 3 * * * /usr/bin/python3 /root/pihole-letsencrypt/update_keyfiles.py`
+- Edit crontab: `crontab -e` and add a new line containing `0 3 * * * /usr/bin/python3 /root/pihole-letsencrypt/update_keyfiles.py 'http://internal.host/path/to/certs/'`
